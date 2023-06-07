@@ -1,0 +1,185 @@
+@font-face {
+  font-family: "Guminert";
+  src: url(../pages/assets/fonts/guminert/GuminertRegular.otf);
+  font-style: normal;
+  
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.hero {
+  padding-top: 40px;
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  background-image: radial-gradient(#dfd6e8 10%, transparent 0);
+  background-size: 20px 20px;
+}
+.fonts {
+  font-family: "Guminert";
+  
+}
+.nav {
+
+  margin: auto;
+  
+  padding: 0px 20px 0px 100px;
+  background-color: #ffecc3;
+  height: 95px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  font-family: "Guminert";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  /* identical to box height, or 156% */
+
+  /* Gray/90% */
+
+  color: #434a5b;
+
+  border-radius: 60px;
+  transition: opacity 1s ease-out;
+}
+.logo {
+  height: 64px;
+  width: 150px;
+  background-color: #fef3e7;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+.font{
+  color: red;
+}
+.logo-image {
+  width: 101px;
+  height: 32px;
+}
+.nav ul {
+  
+  display: flex;
+  justify-content: space-between;
+  flex-direction:row ;
+  list-style: none;
+  width: 35%;
+  height: 28px;
+  align-items: center;
+}
+.nav ul li {
+
+  white-space: nowrap;
+}
+.get {
+  background-image:linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255,255,255,0));
+  backdrop-filter: blur(10px); 
+  transform: translateX(-100%);
+}
+.get:before {
+  
+}
+
+
+@media screen and (max-width: 480px) {
+  .nav {
+    
+    height: 64px;
+    width: 95%;
+    font-family: "Guminert";
+    font-size: 20px;
+    font-weight: 600;
+    justify-content: left;
+    padding-left: 20px;
+  }
+  .hero {
+    padding-top: 25px;
+    background: #ffffff;
+    background-image: radial-gradient(#dfd6e8 15%, transparent 0);
+    background-size: 10px 10px;
+  }
+  .logo {
+    height: 48px;
+    width: 111px;
+    background-color: #fef3e7;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .logo-image {
+    width: 76px;
+    height: 24px;
+  }
+
+  .nav ul {
+    display: none;
+  }
+}
+.list-button-primary{
+background-color: #FFBE37;
+padding: 5px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 30px;
+width: 150px;
+height: 50px;
+}
+.shape{
+  position:absolute;
+ 
+}
+.heroBox{
+  background-image: url(../pages/assets/images/volunteer-1.png);
+}
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 1000px) {
+  .nav {
+    height: 84px;
+    width: 85%;
+    font-size: 20px;
+    justify-content: left;
+    padding-left: 20px;
+  }
+  .nav ul {
+    display: none;
+  }
+
+  .logo {
+    height: 58px;
+    width: 111px;
+    background-color: #fef3e7;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo-image {
+    width: 76px;
+    height: 24px;
+  }
+}
+
+/* Media Query for desktop*/
+@media (min-width: 1000px) and (max-width: 1250px) {
+  .nav{
+    width: 95%;
+    padding:0 20px 0 70px
+  }
+  .nav ul {
+
+    width: 40%;
+   justify-content: space-between;
+  }
+}
