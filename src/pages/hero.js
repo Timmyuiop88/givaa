@@ -2,6 +2,7 @@ import {
   Flex,
   Container,
   Heading,
+  HStack,
   Stack,
   Text,
   Button,
@@ -12,6 +13,7 @@ import {
   AvatarBadge,
   AvatarGroup,
   Center,
+  Show, Hide
 } from "@chakra-ui/react";
 import { ArrowRightIcon } from "@chakra-ui/icons";
 import Image from "next/image";
@@ -69,13 +71,20 @@ export default function Hero() {
           </Button>
         </Stack>
       </Stack>
-      <Stack direction={["column", "column", "column", "row"]} justifyContent={"center"}  spacing={[2]}>
-        <Box
+      <Stack
+        direction={["column", "column", "column", "row"]}
+        justifyContent={"center"}
+        spacing={[2]}
+        position={"relative"}
+      >
+
+<HStack justifyContent={'center'}>
+<Box
           bg="#E7EAEB"
-          w={["180px", "200px", "300px"]}
-          h={["190px", "200px", "320px"]}
+          w={["200px", "220px", "250px", "350px"]}
+            h={["190px", "200px", "250px", "320px"]}
           borderRadius="35px"
-          minW={["180px", "200px", "300px"]}
+          minw={["200px", "220px", "250px", "350px"]}
         >
           <Text
             textAlign={"center"}
@@ -89,7 +98,7 @@ export default function Hero() {
 
           <AvatarGroup
             pt={5}
-            size={["sm", "md", "lg"]}
+            size={["sm", "md", "md", "lg"]}
             max={4}
             justifyContent={"center"}
           >
@@ -107,13 +116,41 @@ export default function Hero() {
             textAlign={"center"}
             pt={1}
             color={"#434A5B"}
-            fontSize={{ base: "2xl", sm: "2xl", md: "5xl" }}
+            fontSize={{ base: "2xl", sm: "2xl", md: "3xl", lg: "5xl" }}
             fontWeight={700}
           >
             200+
           </Text>
+
         </Box>
-        <Stack direction={"row"} justifyContent={"center"} spacing={[0]} pt={3} position={"relative"}>
+
+        <Show below="lg">
+
+
+<Center 
+  
+  top={0}
+  left={["50%", "50%", "0", "0"]}
+  bg="#FFECC3"
+  w={["200px", "220px", "250px", "350px"]}
+  h={["190px", "200px", "250px", "320px"]}
+  borderRadius="35px"
+  minw={["200px", "220px", "250px", "350px"]}
+  
+>
+  <Text fontSize={{ base: "8xl", sm: "8xl", md: "9xl" }}>🤑</Text>
+</Center>
+</Show>
+      
+</HStack>
+
+        <Stack
+          direction={"row"}
+          justifyContent={"center"}
+          spacing={[0]}
+          pt={[3, 3, 1, 0]}
+          position={"relative"}
+        >
           <Box
             filter="auto"
             contrast="70%"
@@ -136,31 +173,35 @@ export default function Hero() {
             h={["190px", "200px", "250px", "320px"]}
             borderRadius="35px"
           ></Box>
+          <Center
+            position={"absolute"}
+            className="get"
+            bottom={"-5"}
+            w={100}
+            h={100}
+            borderRadius="50px"
+            border="2px"
+            borderColor={"#ECEDEF"}
+            justifyContent={"center"}
+            alignItems={"center"}
+          >
+            <Button w="40px" h="40px" borderRadius="100%" bg={"#FFBE37"}>
+              <ArrowRightIcon w="15px" h="15px" />
+            </Button>
+          </Center>
         </Stack>
-        <Stack direction={["row", "row", "row", "column"]} justifyContent={"center"} position={'relative'}>
-        <Center
-          className="get"
-
-          position="absolute"
-         right={['10' , '20', '20', '40']}
-          bottom={'-5'}
-          w={100}
-          h={100}
-          borderRadius="50px"
-          border="2px"
-          borderColor={"#ECEDEF"}
+        <Stack
+          direction={["row", "row", "row", "column"]}
           justifyContent={"center"}
-          alignItems={"center"}
-        >
-          <Button w="40px" h="40px" borderRadius="100%" bg={"#FFBE37"}>
-            <ArrowRightIcon w="15px" h="15px" />
-          </Button>
-        </Center>
-      </Stack>
+          position={"relative"}
+        ></Stack>
+<Hide below="lg">
 
-        <Center
-        position={['absolute', 'absolute', 'absolute', 'relative']}
-       
+
+        <Center 
+          
+          top={0}
+          left={["50%", "50%", "0", "0"]}
           bg="#FFECC3"
           w={["180px", "200px", "300px"]}
           h={["190px", "200px", "320px"]}
@@ -169,9 +210,8 @@ export default function Hero() {
         >
           <Text fontSize={{ base: "8xl", sm: "8xl", md: "9xl" }}>🤑</Text>
         </Center>
+        </Hide>
       </Stack>
-      
-     
     </Container>
   );
 }
