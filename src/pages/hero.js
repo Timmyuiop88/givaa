@@ -15,22 +15,26 @@ import {
   Center,
   Show, Hide
 } from "@chakra-ui/react";
+import { motion } from "framer-motion"
 import { ArrowRightIcon } from "@chakra-ui/icons";
 import Image from "next/image";
 import shape from "./assets/images/shape1.png";
+import { TiMediaEject } from "react-icons/ti";
+
 import volunteer from "./assets/images/volunteer-1.png";
 export default function Hero() {
   return (
-    <Container maxW={"5xl"}>
+    <Container maxW={'5xl'}  pb={10}>
       <Stack
         textAlign={"center"}
         align={"center"}
         spacing={{ base: 8, md: 10 }}
         py={{ base: 10, md: 28 }}
       >
-        <Heading
+        <Heading as={motion.div}
+      
           fontWeight={700}
-          fontSize={{ base: "3xl", sm: "6xl", md: "6xl" }}
+          fontSize={{ base: "3xl", sm: "3xl", md: "6xl" }}
           lineHeight={"150%"}
           color={"#FFBE37"}
         >
@@ -64,6 +68,8 @@ export default function Hero() {
             color={"black"}
             colorScheme={"white"}
             bg={"white"}
+            border={'1px'}
+            borderColor={'#FFBE37'}
             _hover={{ bg: "white" }}
             size="lg"
           >
@@ -72,6 +78,7 @@ export default function Hero() {
         </Stack>
       </Stack>
       <Stack
+      maxW={'5xl'}
         direction={["column", "column", "column", "row"]}
         justifyContent={"center"}
         spacing={[2]}
@@ -81,10 +88,10 @@ export default function Hero() {
 <HStack justifyContent={'center'}>
 <Box
           bg="#E7EAEB"
-          w={["200px", "220px", "250px", "350px"]}
-            h={["190px", "200px", "250px", "320px"]}
+          w={["200px", "220px", "230px", "270px"]}
+            h={["190px", "200px", "230px", "270px"]}
           borderRadius="35px"
-          minw={["200px", "220px", "250px", "350px"]}
+          
         >
           <Text
             textAlign={"center"}
@@ -98,7 +105,7 @@ export default function Hero() {
 
           <AvatarGroup
             pt={5}
-            size={["sm", "md", "md", "lg"]}
+            size={["sm", "md", "md", "md"]}
             max={4}
             justifyContent={"center"}
           >
@@ -116,7 +123,7 @@ export default function Hero() {
             textAlign={"center"}
             pt={1}
             color={"#434A5B"}
-            fontSize={{ base: "2xl", sm: "2xl", md: "3xl", lg: "5xl" }}
+            fontSize={{ base: "2xl", sm: "2xl", md: "3xl", lg: "3xl" }}
             fontWeight={700}
           >
             200+
@@ -132,10 +139,11 @@ export default function Hero() {
   top={0}
   left={["50%", "50%", "0", "0"]}
   bg="#FFECC3"
-  w={["200px", "220px", "250px", "350px"]}
-  h={["190px", "200px", "250px", "320px"]}
+  w={["200px", "200px", "230px", "270px"]}
+  h={["190px", "200px", "230px", "270px"]}
   borderRadius="35px"
-  minw={["200px", "220px", "250px", "350px"]}
+
+
   
 >
   <Text fontSize={{ base: "8xl", sm: "8xl", md: "9xl" }}>🤑</Text>
@@ -158,9 +166,10 @@ export default function Hero() {
             bgSize="cover"
             bgPosition="center"
             bgRepeat="no-repeat"
-            w={["200px", "220px", "250px", "350px"]}
-            h={["190px", "200px", "250px", "320px"]}
+            w={["200px", "220px", "230px", "270px"]}
+            h={["190px", "200px", "230px", "270px"]}
             borderRadius="35px"
+
           ></Box>
           <Box
             filter="auto"
@@ -169,9 +178,10 @@ export default function Hero() {
             bgSize="cover"
             bgPosition="center"
             bgRepeat="no-repeat"
-            w={["200px", "220px", "250px", "350px"]}
-            h={["190px", "200px", "250px", "320px"]}
+            w={["200px", "220px", "230px", "270px"]}
+            h={["190px", "200px", "230px", "270px"]}
             borderRadius="35px"
+        
           ></Box>
           <Center
             position={"absolute"}
@@ -186,7 +196,7 @@ export default function Hero() {
             alignItems={"center"}
           >
             <Button w="40px" h="40px" borderRadius="100%" bg={"#FFBE37"}>
-              <ArrowRightIcon w="15px" h="15px" />
+            <Icon as={TiMediaEject} w="15px" h="15px" rotate={'90deg'} />
             </Button>
           </Center>
         </Stack>
@@ -200,13 +210,13 @@ export default function Hero() {
 
         <Center 
           
-          top={0}
-          left={["50%", "50%", "0", "0"]}
+          
           bg="#FFECC3"
-          w={["180px", "200px", "300px"]}
-          h={["190px", "200px", "320px"]}
+          w={["200px", "220px", "230px", "270px"]}
+          h={["190px", "200px", "230px", "270px"]}
           borderRadius="35px"
-          minW={["180px", "200px", "300px"]}
+   minW={["200px", "220px", "230px", "270px"]}
+         
         >
           <Text fontSize={{ base: "8xl", sm: "8xl", md: "9xl" }}>🤑</Text>
         </Center>

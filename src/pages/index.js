@@ -1,8 +1,15 @@
 
 import Nav from "./nav"
 import Hero from "./hero"
-import Fonts from "./font"
-import { Flex, Spacer } from '@chakra-ui/react'
+import Features from "./features"
+import About from "./about"
+import HowItWorks from "./how_it_works"
+import Who from "./whoItsFor"
+import Fundraiser from "./fundraiser"
+import Getstarted from "./getStarted"
+
+
+
 export default function Home() {
 return(
 <div className="app">
@@ -10,9 +17,13 @@ return(
   <div className="hero">
     <Nav/>
     <Hero/>
-  </div>
-  
-
+</div>
+  <Features/>
+  <HowItWorks/>
+  <About/>
+  <Who/>
+  <Fundraiser/>
+  <Getstarted/>
 </div>
 )
 
