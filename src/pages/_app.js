@@ -1,11 +1,12 @@
 import '@/styles/globals.css'
 import '@/styles/style.css'
+import '@fontsource-variable/manrope';
 import { ChakraProvider , extendTheme} from '@chakra-ui/react'
 
 const theme = extendTheme({
   fonts: {
-    heading: `'guminert'`,
-    body: `'guminert'`,
+    heading: `'Manrope Variable', sans-serif`,
+    body: `'Manrope Variable', sans-serif`,
   },
 })
 

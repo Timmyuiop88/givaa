@@ -25,7 +25,7 @@ import { BiBadgeCheck } from "react-icons/bi";
 import Image from "next/image";
 import bro from "./assets/images/bro.svg";
 import growth from "./assets/images/growth.svg";
-import { FaArrowRight } from "react-icons/fa";
+
 export default function Features() {
   return (
     <Stack m={"auto"} justifyContent={"center"} maxW={"5xl"} pt={10} pb={"150"}>

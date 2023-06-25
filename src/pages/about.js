@@ -29,7 +29,7 @@ import {
 
 export default function About (){
     return(
-    <Container>
+    <Container  pl={0}>
         <Stack pt={20}>
 
                 <Stack direction={['column', 'column', 'row','row']} justifyContent={'center'}>
@@ -37,11 +37,13 @@ export default function About (){
                     w={['380px', '400px', '480px', '600px']}
                     h={['270px','300px','400px', '450px']}
               
-                   minW={['380px', '400px', '480px', '600px']}
+                 
                     maxW={'600px'}
                     display={'flex'}
                     justifyContent={'space-evenly'}
+
                     m={'auto'}
+                    
 
                   
                     >

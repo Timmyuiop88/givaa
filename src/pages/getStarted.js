@@ -35,7 +35,9 @@ export default function Getstarted(){
 
     return(
 <Container>
-    
+    <Stack>
+        
+    </Stack>
 </Container>
     )
 }
