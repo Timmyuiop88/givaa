@@ -19,7 +19,7 @@ export default function Nav() {
             <ul>
                     <li>How it Works</li>
                     <li>Login</li>
-                    <li className="list-button-primary">Get Started</li>
+                    <li className="list-button-primary">Gets Started</li>
                 </ul>
         </div>
     );
